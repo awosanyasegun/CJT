@@ -15,3 +15,39 @@ var Name = prompt("what is your name please");
 var dayNum = prompt('what day of the week is it');
 var activity = Number(dayNum);
 console.log("welcome " + Name +", Today is "+ weekDays[dayNum - 1] + " you will " + activities[dayNum-1] + " today" )
+
+                            Random Monthly Quote Generator
+var month = ["January",
+              "February",
+			  "March",
+			  "April",
+			  "May",
+			  "June",
+			  "July",
+			  "August",
+			  "September",
+			  "October",
+			  "November",
+			  "December",];
+
+var quotes = ["The Month of new Beginning",
+              "The Month of Love",
+			  "Marching to My promise land",
+			  "Crushing all perils",
+			  "Mayday for the Enemy",
+			  "Joining the Glorious Chariot",
+			  "Dismantling the lies of satan",
+			  "August blessing from above",
+			  "Resuming to a glorious Reign",
+			  "8 fold blessings surrounding us",
+			  "No More a Novice to the kingdom",
+			  "A glorious Ending",];
+			  
+var monthCol = prompt("Please Enter the Month of the year here,");
+var monthNum = Number(monthCol);
+ 
+console.log("welcome to " + month[monthNum-1] + " our quote for this month is " + quotes[monthNum-1]);
+document.write("welcome to " + month[monthNum-1] + " our quote for this month is " + quotes[monthNum-1]);
+	  
+
+			  
