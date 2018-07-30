@@ -7,4 +7,11 @@ var task = ["take out Garbage ","Read a book ","write Javascript code ", "Go to 
  
  console.log("today you will " + task[question1-1] + "status of task = " + progress[question2-1]);
 
-                               Second  Code
+                               Weekday Code
+// My study app 
+var weekDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday",];
+var activities = ["study","Pray","Go to the library","fetch water","Bible study","Prayer meeting","Go to church",];
+var Name = prompt("what is your name please");
+var dayNum = prompt('what day of the week is it');
+var activity = Number(dayNum);
+console.log("welcome " + Name +", Today is "+ weekDays[dayNum - 1] + " you will " + activities[dayNum-1] + " today" )
