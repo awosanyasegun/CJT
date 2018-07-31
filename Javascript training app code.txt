@@ -62,4 +62,8 @@ console.log("welcome to " + month[monthNum-1] + " our quote for this month is " 
 document.write("welcome to " + month[monthNum-1] + " our quote for this month is " + quotes[monthNum-1]);
 	  
 
-			  
+			  Random Animal Selectors
+var Animals = ['Bird','Fish','Camel','Pidgeon','Sparow',"Monkey","see Horse","carpuchin","Eagles","Magpie","Turtle",];
+var ranNum = Math.floor(Math.random()* Animals.length);
+document.write ("Welcome your random animal is " + Animals[ranNum]);
+//The purpose of Useing.Lenght is to make the Array as Dynamic as Possible.
