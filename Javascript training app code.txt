@@ -16,7 +16,19 @@ var dayNum = prompt('what day of the week is it');
 var activity = Number(dayNum);
 console.log("welcome " + Name +", Today is "+ weekDays[dayNum - 1] + " you will " + activities[dayNum-1] + " today" )
 
-                            Random Monthly Quote Generator
+             
+                                  still more weekdays Activity App
+                            
+var weekDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday",];
+var activities = ["Study","play","Program","Ride a Bicycle","Hike","Travel","Preach",];
+var name = prompt("input you name please");
+var weekNum = prompt("Enter the day of the week");
+var actNum = Number(weekNum);
+var Message = "Welcome " + name + " Today is " + weekDays[actNum-1] + "And you will " + activities[actNum-1];
+document.write(Message);
+
+
+                                 Random Monthly Quote Generator
 var month = ["January",
               "February",
 			  "March",
