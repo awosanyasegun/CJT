@@ -215,7 +215,73 @@ var collector = prompt("Enter the position between the first to the 4th position
 var numCollector = Number(collector);
 var message = "This is " + people[0][collector - 1] + " He was born in the year " + people[1][collector - 1] + " at " + people[2][collector -1];
 document.write(message);
+-------------------------------------------------------------------------------------------------------------------------------------
+                                LISTING AN ARRAY INSIDE AN ARRAY
 
-This particular Array can give you information of person Just by mere inputing the position
+-------------------------------------------------------------------------------------------------------------------------------------
+   THIS FORMULAR HELPS YOU TO LOOP THROUGH CONTENT IN ARRAY
+var people = ["Mike","Segun","Seyi","Samson","1990","1994","1992","1993","skypark","Sagamu","ilisan","Isara",];
+for(var x in people){
+	console.log(x);
+	console.log(people[x])
+}
+-------------------------------------------------------------------------------------------------------------------------------------
 
+                
+                                    HARNESSING THE POWER OF OBJECTS
+
+
+
+var car = {
+	color:"Blue",
+	model:"1995",
+	wheels:"Aloy",
+	brand:"coupe",
+	maxspeed:"120km/h",
+};
+var prop = prompt("what property of the car do want to see");
+document.write(car[prop]);
+
+This code used the Bracket notation to make accessing every property in the object more Dynamic 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+                                          
+                            HARNESSING THE POWER OF OBJECTS IN ARRAYS WITH THIS CODE
+
+// LISTING OBJECTS INSIDE Array
+/*               0    1   2   3
+  var Hotels =[{..},{..},{..},{..}];*/
+ var Hotels = [{food:"pap",sport:"chess",city:"vinnytsia",},
+               {food:"porride",sport:"soccer",city:"sumy",},
+	       {food:"beans",sport:"volleyball",city:"kiev",},
+	       {food:"burger",sport:"basketball",city:"lviv",}];
+			   
+var q = prompt("choose your week");// The week is to get a value
+var qnum = Number(q);
+var message = "welcome to the " + qnum + " week";
+var food = prompt("input food");
+var sport = prompt("please sport");
+var city = prompt("please city");
+
+document.write("your needs for week " + qnum + " you will be eating " + Hotels[qnum - 1][food] + " your sport is " + Hotels[qnum - 1][sport] + " and you will be travelling to " + Hotels[q - 1][city]);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                      SAME AS THE FIRST ONE BUT THE MESSAGE WAS MODIFIED
+
+ var Hotels = [{food:"pap",sport:"chess",city:"vinnytsia",},
+               {food:"porride",sport:"soccer",city:"sumy",},
+	           {food:"beans",sport:"volleyball",city:"kiev",},
+	           {food:"burger",sport:"basketball",city:"lviv",}];
+			   
+var q = prompt("choose your week");// The week is to get a value
+var qnum = Number(q);
+var message = "welcome to the " + qnum + " week";
+var food = prompt("input food");
+var sport = prompt("please sport");
+var city = prompt("please city");
+
+document.write("welcome to week " + qnum + " your lunch for today is " + Hotels[qnum - 1][food] +","+ "  and your scheduled sport is " + Hotels[qnum - 1][sport] +","+ " afterwhich you will travel to " + Hotels[q - 1][city]);
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
