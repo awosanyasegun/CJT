@@ -1,5 +1,5 @@
     
-                              My first Todo list App code 
+                              MY FIRST TODO APP CODE
 var task = ["take out Garbage ","Read a book ","write Javascript code ", "Go to work "];
  var progress = ["done","in progress", "to do"];
  var question1 = prompt("which task 1-4");
@@ -7,7 +7,9 @@ var task = ["take out Garbage ","Read a book ","write Javascript code ", "Go to 
  
  console.log("today you will " + task[question1-1] + "status of task = " + progress[question2-1]);
 
-                               Weekday Code
+                              
+                                 WEEKDAY QUOTE
+               
 // My study app 
 var weekDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday",];
 var activities = ["study","Pray","Go to the library","fetch water","Bible study","Prayer meeting","Go to church",];
@@ -17,7 +19,7 @@ var activity = Number(dayNum);
 console.log("welcome " + Name +", Today is "+ weekDays[dayNum - 1] + " you will " + activities[dayNum-1] + " today" )
 
              
-                                  still more weekdays Activity App
+                                  still MORE WEEKDAY ACTIVITY APP
                             
 var weekDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday",];
 var activities = ["Study","play","Program","Ride a Bicycle","Hike","Travel","Preach",];
@@ -28,7 +30,9 @@ var Message = "Welcome " + name + " Today is " + weekDays[actNum-1] + "And you w
 document.write(Message);
 
 
-                                 Random Monthly Quote Generator
+                            
+                        QUOTE GENRATOR WITH MONTH USING NUMBER INPUT FROM THE PROMPT
+ 
 var month = ["January",
               "February",
 			  "March",
@@ -61,9 +65,157 @@ var monthNum = Number(monthCol);
 console.log("welcome to " + month[monthNum-1] + " our quote for this month is " + quotes[monthNum-1]);
 document.write("welcome to " + month[monthNum-1] + " our quote for this month is " + quotes[monthNum-1]);
 	  
+  
+                                   RANDOM MONTH WITH QUOTE GENERATOR
+//Compare to the code above where you have to Enter the index to the prompt and then subtract one so as the able to
+choose from the array and not exceed the array, This code uses the power of the Math.Object and the Array.prototype.length
+to generate months and quotes for the yeaer. What a nice Amazing Code.
 
-			  Random Animal Selectors
+
+var month = ["January",
+              "February",
+			  "March",
+			  "April",
+			  "May",
+			  "June",
+			  "July",
+			  "August",
+			  "September",
+			  "October",
+			  "November",
+			  "December",];
+
+var quotes = ["The Month of new Beginning",
+              "The Month of Love",
+			  "Marching to My promise land",
+			  "Crushing all perils",
+			  "Mayday for the Enemy",
+			  "Joining the Glorious Chariot",
+			  "Dismantling the lies of satan",
+			  "August blessing from above",
+			  "Resuming to a glorious Reign",
+			  "8 fold blessings surrounding us",
+			  "No More a Novice to the kingdom",
+			  "A glorious Ending",];
+			  M 
+var ranDom = Math.floor(Math.random() * month.length);
+var MonthCol = ranDom;
+document.write("Your Lucky Month is " + month[ranDom] + " it is your Month of " + quotes[ranDom]);
+	 
+       IN THESE CODE YOU ENTER THE MONTH AND THE CODE GIVES YOU THE CODE FOR THAT MONTH SPECIFICALLY
+                   
+var month = ["January",
+              "February",
+			  "March",
+			  "April",
+			  "May",
+			  "June",
+			  "July",
+			  "August",
+			  "September",
+			  "October",
+			  "November",
+			  "December",];
+
+var quotes = ["The Month of new Beginning",
+              "The Month of Love",
+			  "Marching to My promise land",
+			  "Crushing all perils",
+			  "Mayday for the Enemy",
+			  "Joining the Glorious Chariot",
+			  "Dismantling the lies of satan",
+			  "August blessing from above",
+			  "Resuming to a glorious Reign",
+			  "8 fold blessings surrounding us",
+			  "No More a Novice to the kingdom",
+			  "A glorious Ending",];
+			  
+var enterMonth = prompt("Please enter Month here please start with capital Letter");
+var monthIndex = month.indexOf(enterMonth);
+var message = "Welcome to the month of " + month[monthIndex] + " it is your Month of " + quotes[monthIndex];
+document.write (message);
+
+
+			  RANDOM ANIMAL SELECTOR
 var Animals = ['Bird','Fish','Camel','Pidgeon','Sparow',"Monkey","see Horse","carpuchin","Eagles","Magpie","Turtle",];
 var ranNum = Math.floor(Math.random()* Animals.length);
 document.write ("Welcome your random animal is " + Animals[ranNum]);
 //The purpose of Useing.Lenght is to make the Array as Dynamic as Possible.
+
+
+
+                        AN ANIMAL GUESSING GAME
+var animals = ["cat","dogs","rabbit","bird","fish",];
+var ranDom = Math.floor(Math.random() * animals.length);
+var randomAnimal = animals[ranDom];
+var message = prompt("which index value is " + randomAnimal);
+var response = (message == ranDom)? "Congratulations you are right":"Sorry the answer is " + ranDom;
+document.write(response);
+
+
+                 THIS CODE CHECKS FROM THE ARRAY IF AN ANIMAL IS PRESENT
+var newHolder = ["cat","dog","rabbit","bird",];
+var animalChecker = prompt("please enter you animal");
+var validator = newHolder.indexOf(animalChecker);
+var message = (validator >= 0)? "Congratulations your animals is present in the " +( Number(validator) + Number(1)) + " position in the list but the index of " + validator:"sorry " + animalChecker + " is not on the list";
+document.write(message);
+
+This code check from the array with  " array.includes("what you are searching from the array ")
+ if the array.includes finds something it will return the "true bolean"
+var newHolder = ["cat","dog","rabbit","bird",];      
+var animalChecker = prompt("please enter you animal");
+var includer = newHolder.includes(animalChecker);
+var message = (includer == true)? "Found it":"Absent";
+document.write(message);
+
+
+         
+          THIS CODES REMOVES THINGS FROM THE ARRAY
+                          PART ONE VARIANT
+var animals = ["camel","dog","goat","croc","lion","monkey",];
+animals.sort();
+console.log(animals);
+//var animals after sorting =["camel","croc","dog","goat","lion","monkey",];
+var collector = prompt("which animal do you want to remove?");
+var collectIndex =  animals.indexOf(collector);
+var remove = animals.splice(collectIndex,1);
+document.write(animals);
+document.write(collector + " Has been removed from the list");
+ ---------------------------------------------------------------------------------------------------------------------------------                         
+                         PART TWO VARIANT    
+var animals = ["camel","rat","goat","fish","frog",];
+var whichAnimal = prompt("Which animal do you want to remove");
+var choose = animals.indexOf(whichAnimal);
+var remove = animals.splice(choose,1);
+var message = whichAnimal + " Has been removed so the animals left are " + animals ;
+document.write(message);
+
+Note:::::This code here has a weakness, whenever you input an animal that is absent from the list 
+it will automatically remove the animal last in the array. so in other to combat the code beneath shows the way forward;
+
+
+   PART THREE VARIANT OF ANIMAL REMOVE + RESULT FOR REMOVING THE LAST ANIMAL FROM THE LIST WITHOUT 
+                       REMOVING THE LAST ANIMAL ON THE ARRAY  
+
+var animals = ["camel","dog","goat","croc","lion","monkey",];
+animals.sort();
+console.log(animals);
+//var animals after sorting =["camel","croc","dog","goat","lion","monkey",];
+var collector = prompt("which animal do you want to remove?");
+var collectIndex =  animals.indexOf(collector);
+var spliceIndex = animals.splice(collectIndex,1);
+var message = (collectIndex > -1)? spliceIndex +" Has been removed " + animals + " are remaining animals on the list" : "sorry " + collector + " is absent from the list";
+document.write(message);
+------------------------------------------------------------------------------------------------------------------------------------
+
+              IN THESE CODES HERE WE WILL BE HARNESSING THE POWER MULTI-DIMENTIONAL ARRAY
+
+var people = [["Mike","Segun","Seyi","Samson",],["1990","1994","1992","1993",],["skypark","Sagamu","ilisan","Isara",]];
+var collector = prompt("Enter the position between the first to the 4th position");
+var numCollector = Number(collector);
+var message = "This is " + people[0][collector - 1] + " He was born in the year " + people[1][collector - 1] + " at " + people[2][collector -1];
+document.write(message);
+
+This particular Array can give you information of person Just by mere inputing the position
+
+
