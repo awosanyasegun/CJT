@@ -275,12 +275,12 @@ document.write("your needs for week " + qnum + " you will be eating " + Hotels[q
 	           {food:"beans",sport:"volleyball",city:"kiev",},
 	           {food:"burger",sport:"basketball",city:"lviv",}];
 			   
-var q = prompt("choose your week");// The week is to get a value
+var q = prompt("choose your week");// The week is to get an index
 var qnum = Number(q);
 var message = "welcome to the " + qnum + " week";
-var food = prompt("input food");
-var sport = prompt("please sport");
-var city = prompt("please city");
+var food = prompt("input food");//this are variables to make the object dynamic
+var sport = prompt("please sport");//this are variables to make the object dynamic
+var city = prompt("please city");//this are variables to make the object dynamic
 
 document.write("welcome to week " + qnum + " your lunch for today is " + Hotels[qnum - 1][food] +","+ "  and your scheduled sport is " + Hotels[qnum - 1][sport] +","+ " afterwhich you will travel to " + Hotels[q - 1][city]);
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
