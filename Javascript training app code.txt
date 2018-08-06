@@ -272,8 +272,8 @@ document.write("your needs for week " + qnum + " you will be eating " + Hotels[q
 
  var Hotels = [{food:"pap",sport:"chess",city:"vinnytsia",},
                {food:"porride",sport:"soccer",city:"sumy",},
-	           {food:"beans",sport:"volleyball",city:"kiev",},
-	           {food:"burger",sport:"basketball",city:"lviv",}];
+	       {food:"beans",sport:"volleyball",city:"kiev",},
+	       {food:"burger",sport:"basketball",city:"lviv",}];
 			   
 var q = prompt("choose your week");// The week is to get an index
 var qnum = Number(q);
@@ -284,4 +284,34 @@ var city = prompt("please city");//this are variables to make the object dynamic
 
 document.write("welcome to week " + qnum + " your lunch for today is " + Hotels[qnum - 1][food] +","+ "  and your scheduled sport is " + Hotels[qnum - 1][sport] +","+ " afterwhich you will travel to " + Hotels[q - 1][city]);
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                 LOOPING THROUGH AN OBJECT
+
+//the first for loop will only display the keys of the objects property:
+//the second for loop will always display the values values of the objects property:
+//the third for looop will always display the keys and values of the objects property:
+
+//N.B car.Maxspeed = "120km/h" or any thing can be added to the object because it highly dynamic 
+
+              
+var car = {
+	color:"red",
+	make:"ford",
+	doors: 5,
+	model:"mustang",
+};
+for (var property in car){
+	 document.write(property);
+};
+// This loop will only display the keys of the properties of the above objects
+
+for (var property in car){
+	 document.write(car[property]);
+};
+//This loop will only display the value of the properties
+
+for (var property in car){
+	 document.write(property+": "+car[property]);
+};
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
