@@ -314,4 +314,42 @@ for (var property in car){
 };
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+/*var i = 1;
+var calories = 89;
+var bananas = prompt("How many Bananas do you want to eat");
+var holder;
+var total = calories * Number(bananas);
+for(i = 1; i <= bananas; i++){
+	var holder = (i === 1)?" banana": " bananas " ;
+	document.write(i + holder + " is " + calories * i + " calories " + "<br>");
+}
+    document.write("Your TotaL Bananas is " + total);*/
+	
+	
+	/*var calories = 89;
+var bananaAmount = prompt("How many bananas do you want ");
+var holder;
+var total = calories * Number(bananaAmount);
+var html = '';
+for(i = 1; i <= bananaAmount; i++){
+	holder = (i > 1)? " Bananas ":" Banana ";
+    document.write("you ate " + i + holder + ", you have consumed " + calories * i + "<br>");
+}
+    document.write("total calories that would be consume " + total + " calories "); * /
 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+SOURCE CODE FOR BUILDING SHOPPING LIST
+
+var shopList = [];
+var addItems;
+var itemsNeed = prompt("How many items ");
+for(var i = 0; i < itemsNeed; i++){
+	var addItems = (i == 0)?prompt("Enter your first Item"):prompt("Enter another item");
+	if(addItems == "finish"){break;};
+	shopList.push(addItems);
+}
+for(value of shopList){
+	document.write(value + "<br>")
+}
