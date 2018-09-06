@@ -353,3 +353,101 @@ for(var i = 0; i < itemsNeed; i++){
 for(value of shopList){
 	document.write(value + "<br>")
 }
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+                             BUILDING A SHOPPING LIST FUNCTION WITH LOOP
+
+var x = 0;
+var shoppingList =[];
+var itemNumber = prompt("How many item do you want to buy");
+var addItem;
+while(x < itemNumber/*The item Number is needed for to know the amount of times the looping should be done**/){
+    var input = (x == 0)? prompt("enter your first item"):prompt("please enter the other item")
+    if(input == "no"){break;}	
+	shoppingList.push(input);
+	x++;
+    
+}
+
+for(value of shoppingList){
+	document.write( value + "<br>");
+}
+--------------------------------------------------------------------------------------------------------------------------------
+   
+                                      CODE FOR NUMBER GUESSING GAME
+
+var cCode = [];
+var count = 0;
+var output = document.getElementById('output');
+var c1 = document.getElementById('code1');
+var c2 = document.getElementById('code2');
+var c3 = document.getElementById('code3');
+for(var x = 0; x<3; x++){
+	cCode.push(Math.floor(Math.random() * 9));
+}
+function crack(){
+	count = 0;
+	var guess = [c1.value,c2.value,c3.value];
+	for(var x = 0; x < cCode.length; x++){
+	output.innerHTML += checkNum(guess[x],cCode[x]);
+	}
+	if (count == 3){
+		output.innerHTML +="you guessed it";
+	}else{
+		output.innerHTML += '<br>';
+	}
+}
+function checkNum(a,b){
+	if(a>b){return "L"};
+	if(a<b){return "H"};
+	if(a == b){
+		count++;
+		return a;
+	
+	}
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+----                                    RECURSIVE FUNCTION WORD GUESSER GAME;
+
+
+var secretWord = "Javascript";
+var output = document.getElementById('output');
+
+function start(){
+	getSecret(prompt('what is the secret word?'))
+}
+function getSecret(secret){
+	if(secret == secretWord){
+		output.innerHTML = "you win";
+	}else {
+		getSecret(prompt("Guess again"));
+	}
+
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+                                     RECURSIVE FUNCTION WORD GUESSER GAME WITH ARRAYS BY SEGUN------------------------
+									 
+var password = ["Javascript","Python","C++","Java",];// listed an array
+var output = document.getElementById('output');      
+function start(){
+	guessCode(prompt("Enter the secret code"));   // called the  guessCode function
+}
+function guessCode(secret){
+	var m = password.indexOf(secret);       // locate the index number of my input
+    var mIndex = password[m];               // used my index number to locate  my index in the Array
+	if( secret == mIndex ){
+		output.innerHTML = "you guessed it"
+	}else{
+		guessCode(prompt("Guess again"));     
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
