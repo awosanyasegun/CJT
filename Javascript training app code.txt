@@ -451,3 +451,47 @@ function guessCode(secret){
 }
 
 --------------------------------------------------------------------------------------------------------------------------------
+
+Building a simple calculator Using callbacks
+
+     BUILDING A CALCULATOR WITH CALLBACK FUNCTIONS
+
+var output=document.getElementById("output");
+var num1 = document.getElementById("num1");
+var num2 = document.getElementById("num2");
+
+function cal(a,b,c,out){
+	var result = out(Number(a),Number(b));
+	output.innerHTML += a + ' ' + c + b + ' = ' + result + "<br>";
+}
+function addBy(){
+cal(num1.value,num2.value,"+", function (x,y){
+	return x + y;
+});
+}
+function subBy(){
+cal(num1.value,num2.value,"-", function (x,y){
+	return x - y;
+});
+}
+function mulBy(){
+cal(num1.value,num2.value,"*", function (x,y){
+	return x * y;
+});
+}
+function divBy(){
+cal(num1.value,num2.value,"/", function (x,y){
+	return x / y;
+});
+}
+
+-------------------------------------------------------------------------------
+
+        HOW TO GENERATE GREETINGS WITH WINDOWS OBJECT
+
+window.setTimeout(greet,5000);
+function greet(){
+	document.getElementById("wrapper").innerHTML = "WELCOME TO MY WEBSITE"
+}
+
+   

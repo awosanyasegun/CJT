@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+
+        HOW TO GENERATE GREETINGS WITH WINDOWS OBJECT
+
+window.setTimeout(greet,5000);
+function greet(){
+	document.getElementById("wrapper").innerHTML = "WELCOME TO MY WEBSITE"
+}
+
+   
