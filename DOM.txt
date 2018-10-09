@@ -31,6 +31,59 @@ function greet(){
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
+       HOW TO CLICK ON A BUTTON AND DISPLAY THE BUTTON(or anything) SELECTED AND SHOW THAT THE BUTTON HAS BEEN SELECTED ON THE BUTTON VALUE
 
-
+<html>
+<head>
+ <title></title>
+</head>
+ <body>
+<div id = "wrapper"></div>
+ <form name = "myForm">
+   <input type = "button" onclick = "myFun(this)" value = "click 1">
+   <input type = "button" onclick = "myFun(this)" value = "click 2">
+   <input type = "button" onclick = "myFun(this)" value = "click 3">
+ </form>
+   <!--- jAVASCRIPT
+ var output = document.getElementById("wrapper");
+function myFun(t){
+	output.innerHTML = t.value; // displaY the value of the button
+	t.value = "selected---> // change the value of the button upon clicking
+}
+<script src = "slider.js" type="text/javascript"></script>
+ </body>	
+</html>
    
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+  HOW TO CLICK ON A BUTTON or Anything AND DISPLAY THE BUTTON SELECTED AND SHOW THAT THE BUTTON HAS BEEN SELECTED ON THE BUTTON VALUE
+                                      USING EVENT LISTENERS
+
+
+
+<html>
+<head>
+ <title></title>
+</head>
+ <body>
+<div id = "wrapper"></div>
+ <form name = "myForm">
+   <input type = "button"  id = "id1" value = "click 1">
+   <input type = "button"  id = "id2" value = "click 2">
+   <input type = "button"  id = "id3" value = "click 3">
+ </form>
+ 
+ *******    JAVASCRIPT
+var output = document.getElementById("wrapper");
+document.getElementById("id1").onclick = myFun;
+document.getElementById("id2").onclick = myFun
+document.getElementById("id3").onclick = myFun
+function myFun(){
+	output.innerHTML = "Welcome"
+	this.value = "clicked"
+}
+
+<script src = "slider.js" type="text/javascript"></script>
+ </body>	
+</html>
